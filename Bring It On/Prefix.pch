@@ -1,0 +1,17 @@
+//
+// Prefix header for all source files of the 'Bring It On' target in the 'Bring It On' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "UIColor+ColorC.h"
+    #import "MBProgressHUD.h"
+    #define LogMethod() NSLog(@"Method logged: %@:%@:%d", NSStringFromClass([self class]), NSStringFromSelector(_cmd), __LINE__)
+#endif
